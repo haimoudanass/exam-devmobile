@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark mode — premium glass on deep gradient -->
+    <color name="bg_gradient_start">#0F172A</color>
+    <color name="bg_gradient_end">#312E81</color>
+    <color name="glass_surface">#38FFFFFF</color>
+    <color name="glass_surface_end">#1FFFFFFF</color>
+    <color name="glass_stroke">#55FFFFFF</color>
+    <color name="clay_surface">#1E293B</color>
+    <color name="clay_shadow">#40000000</color>
+    <color name="text_primary">#F8FAFC</color>
+    <color name="text_secondary">#CBD5E1</color>
+    <color name="accent">#818CF8</color>
+    <color name="badge_text_on_color">#FFFFFF</color>
+    <color name="chip_stroke">#64748B</color>
+    <color name="input_text">#F1F5F9</color>
+    <color name="input_hint">#94A3B8</color>
+
+    <color name="category_safety">#F87171</color>
+    <color name="category_lighting">#FACC15</color>
+    <color name="category_waste">#4ADE80</color>
+    <color name="category_water">#60A5FA</color>
+    <color name="category_infrastructure">#A78BFA</color>
+    <color name="category_general">#94A3B8</color>
+
+    <color name="status_pending">#FBBF24</color>
+    <color name="status_in_progress">#60A5FA</color>
+    <color name="status_resolved">#34D399</color>
+</resources>

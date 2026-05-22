@@ -1,0 +1,22 @@
+/backend/vendor/
+/backend/node_modules/
+/backend/.env
+/backend/storage/*.key
+/backend/public/storage
+/backend/database/*.sqlite
+
+/frontend/.gradle/
+/frontend/build/
+/frontend/app/build/
+/frontend/**/build/
+/frontend/local.properties
+/frontend/.idea/
+/frontend/app/google-services.json
+
+# Secrets & clés locales
+**/.env
+**/firebase-auth.json
+**/MAPS_API_KEY*
+
+.DS_Store
+Thumbs.db

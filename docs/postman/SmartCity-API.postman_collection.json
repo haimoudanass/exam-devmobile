@@ -1,0 +1,136 @@
+{
+  "info": {
+    "name": "Smart City — API (Citoyen + Admin)",
+    "description": "Collection pour la soutenance : login admin, changement de statut, notification FCM.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://192.168.11.103:8000/api/v1" },
+    { "key": "admin_token", "value": "" },
+    { "key": "citizen_token", "value": "" },
+    { "key": "report_id", "value": "1" }
+  ],
+  "item": [
+    {
+      "name": "1 — Admin login (pour updateStatus)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"admin@smartcity.local\",\n  \"password\": \"admin123\"\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": "{{base_url}}/auth/login"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const json = pm.response.json();",
+              "if (json.token) { pm.collectionVariables.set('admin_token', json.token); }"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "2 — Citoyen login (demo mobile)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"demo@smartcity.local\",\n  \"password\": \"password123\"\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": "{{base_url}}/auth/login"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const json = pm.response.json();",
+              "if (json.token) { pm.collectionVariables.set('citizen_token', json.token); }"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "3 — Liste des rapports",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Accept", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{admin_token}}" }
+        ],
+        "url": "{{base_url}}/reports?per_page=50"
+      }
+    },
+    {
+      "name": "4 — Détail rapport",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Accept", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{admin_token}}" }
+        ],
+        "url": "{{base_url}}/reports/{{report_id}}"
+      }
+    },
+    {
+      "name": "5 — Admin : passer en EN COURS",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Accept", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"status\": \"in_progress\"\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": "{{base_url}}/reports/{{report_id}}/status"
+      }
+    },
+    {
+      "name": "6 — Admin : RÉSOUDRE (+ push FCM)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Accept", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"status\": \"resolved\"\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": "{{base_url}}/reports/{{report_id}}/status"
+      }
+    },
+    {
+      "name": "7 — Enregistrer token FCM (citoyen)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Accept", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{citizen_token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"fcm_token\": \"PASTE_FCM_TOKEN_FROM_LOGCAT_OR_FIREBASE\"\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": "{{base_url}}/users/fcm-token"
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_500">#6366F1</color>
+    <color name="purple_700">#4F46E5</color>
+    <color name="teal_200">#2DD4BF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Light mode — soft glass on bright gradient -->
+    <color name="bg_gradient_start">#EEF2FF</color>
+    <color name="bg_gradient_end">#C7D2FE</color>
+    <color name="glass_surface">#CCFFFFFF</color>
+    <color name="glass_surface_end">#99FFFFFF</color>
+    <color name="glass_stroke">#66A5B4FC</color>
+    <color name="clay_surface">#F8FAFC</color>
+    <color name="clay_shadow">#1A64748B</color>
+    <color name="text_primary">#0F172A</color>
+    <color name="text_secondary">#475569</color>
+    <color name="accent">#4F46E5</color>
+    <color name="voice_accent">#06B6D4</color>
+    <color name="badge_text_on_color">#FFFFFF</color>
+    <color name="chip_stroke">#94A3B8</color>
+    <color name="input_text">#1E293B</color>
+    <color name="input_hint">#64748B</color>
+
+    <!-- AI category badges -->
+    <color name="category_safety">#EF4444</color>
+    <color name="category_lighting">#EAB308</color>
+    <color name="category_waste">#22C55E</color>
+    <color name="category_water">#3B82F6</color>
+    <color name="category_infrastructure">#8B5CF6</color>
+    <color name="category_general">#64748B</color>
+
+    <!-- Status badges -->
+    <color name="status_pending">#F59E0B</color>
+    <color name="status_in_progress">#3B82F6</color>
+    <color name="status_resolved">#10B981</color>
+</resources>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Smart City</string>
+    <string name="login_title">Bon retour</string>
+    <string name="login_subtitle">Connectez-vous pour signaler et suivre les problèmes urbains</string>
+    <string name="email_hint">E-mail</string>
+    <string name="password_hint">Mot de passe</string>
+    <string name="login_button">Se connecter</string>
+    <string name="login_error_empty">L\'e-mail et le mot de passe sont obligatoires</string>
+
+    <string name="home_title">Tableau de bord</string>
+    <string name="home_subtitle">Votre hub ville intelligente</string>
+    <string name="open_map">Voir la carte</string>
+    <string name="new_report">Nouveau signalement</string>
+
+    <string name="map_title">Carte des signalements</string>
+    <string name="map_placeholder">Carte Google Maps — signalements en temps réel</string>
+
+    <string name="report_title">Nouveau signalement</string>
+    <string name="report_title_hint">Titre du problème</string>
+    <string name="report_description_hint">Description</string>
+    <string name="report_submit">Envoyer le signalement</string>
+    <string name="report_error_title">Le titre est obligatoire</string>
+    <string name="report_saved">Signalement envoyé avec succès</string>
+    <string name="report_location_loading">Récupération de la position GPS…</string>
+    <string name="report_location_ready">GPS : %1$.5f, %2$.5f</string>
+    <string name="report_location_error">Impossible d\'obtenir le GPS. Activez la localisation et réessayez.</string>
+    <string name="report_take_photo">Prendre une photo</string>
+    <string name="report_photo_preview">Aperçu de la photo</string>
+    <string name="report_submitting">Envoi en cours…</string>
+    <string name="report_ai_category">Catégorie IA : %1$s</string>
+    <string name="login_loading">Connexion…</string>
+    <string name="login_failed">Échec de la connexion</string>
+    <string name="map_loading">Chargement des signalements…</string>
+    <string name="map_error">Impossible de charger la carte</string>
+    <string name="demo_hint">Démo : demo@smartcity.local / password123</string>
+
+    <string name="nav_home">Accueil</string>
+    <string name="nav_map">Carte</string>
+    <string name="nav_report">Signaler</string>
+    <string name="home_list_subtitle">Tirez pour actualiser • Appuyez pour les détails</string>
+    <string name="home_empty">Aucun signalement. Créez-en un depuis l\'onglet Signaler.</string>
+    <string name="label_category">IA : %1$s</string>
+    <string name="label_status">Statut : %1$s</string>
+    <string name="detail_title">Détails du signalement</string>
+    <string name="detail_no_description">Aucune description fournie.</string>
+    <string name="detail_coords">Coordonnées : %1$.5f, %2$.5f</string>
+    <string name="detail_distance_loading">Calcul de la distance…</string>
+    <string name="detail_distance_meters">Distance : %1$d m</string>
+    <string name="detail_distance_kilometers">Distance : %1$.1f km</string>
+    <string name="detail_distance_error">Impossible d\'obtenir votre position. Activez le GPS et autorisez la localisation.</string>
+    <string name="detail_distance_permission">L\'autorisation de localisation est requise pour afficher la distance.</string>
+    <string name="detail_navigate">S\'y rendre</string>
+    <string name="detail_navigate_error">Google Maps n\'est pas installé sur cet appareil.</string>
+    <string name="detail_open_full">Voir tous les détails</string>
+
+    <string name="filter_all">Tous</string>
+    <string name="filter_pending">En attente</string>
+    <string name="filter_in_progress">En cours</string>
+    <string name="filter_resolved">Résolu</string>
+
+    <string name="notification_channel_name">Mises à jour des signalements</string>
+    <string name="notification_channel_desc">Notifications lorsque vos signalements changent de statut</string>
+
+    <!-- Libellés d'affichage des catégories API (Gemini) — ne pas modifier les clés JSON -->
+    <string name="display_cat_safety">Sécurité</string>
+    <string name="display_cat_infrastructure">Infrastructure</string>
+    <string name="display_cat_lighting">Éclairage</string>
+    <string name="display_cat_waste">Déchets</string>
+    <string name="display_cat_water">Eau</string>
+    <string name="display_cat_general">Général</string>
+
+    <!-- Libellés d'affichage des statuts API -->
+    <string name="display_stat_pending">En attente</string>
+    <string name="display_stat_in_progress">En cours</string>
+    <string name="display_stat_resolved">Résolu</string>
+
+    <string name="notif_resolved_title">Signalement résolu</string>
+    <string name="notif_resolved_body">Votre signalement « %1$s » a été résolu !</string>
+
+    <string name="voice_fab_desc">Ouvrir l\'assistant Gemini</string>
+    <string name="chat_title">Assistant Gemini</string>
+    <string name="chat_welcome">Bonjour ! Je suis Gemini, l\'assistant Smart City. Écrivez ou appuyez sur le micro pour parler.</string>
+    <string name="chat_input_hint">Votre message…</string>
+    <string name="chat_send_desc">Envoyer</string>
+    <string name="chat_mic_desc">Parler</string>
+    <string name="chat_ai_label">Gemini</string>
+    <string name="chat_listening">Écoute en cours…</string>
+    <string name="voice_user_toast">Vous : %1$s</string>
+    <string name="voice_listening">Écoute en cours… Parlez maintenant.</string>
+    <string name="voice_permission_denied">Microphone refusé. Autorisez l\'accès au micro dans les paramètres.</string>
+    <string name="voice_stt_unavailable">Reconnaissance vocale non disponible sur cet appareil.</string>
+    <string name="voice_stt_failed">Je n\'ai pas compris. Réessayez.</string>
+    <string name="voice_tts_unavailable">Synthèse vocale indisponible.</string>
+    <string name="voice_assistant_greeting">Bonjour ! Je suis Gemini, l\'assistant de Smart City. Comment puis-je vous aider ?</string>
+    <string name="voice_assistant_report">Pour signaler un problème, ouvrez l\'onglet Signaler ou décrivez le souci sur place avec une photo.</string>
+    <string name="voice_assistant_map">Consultez l\'onglet Carte pour voir tous les signalements autour de vous.</string>
+    <string name="voice_assistant_default">Je peux vous guider vers la carte, un nouveau signalement ou le statut de vos rapports. Que souhaitez-vous faire ?</string>
+</resources>
